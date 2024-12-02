@@ -16,6 +16,7 @@ class InputFetcher
   end
 
   def get
+    puts source_file_path
     return File.read(file_path) if file_path.exist?
     if debug?
       download_debug_input
