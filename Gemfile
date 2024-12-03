@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'byebug'
-
+gem 'solargraph'
 # Support libraries
 gem 'algorithms'
 
