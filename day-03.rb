@@ -20,23 +20,21 @@ class Day3 < AdventDay
     result = 0
     enabled = true
     data.each do |line|
-    instructions = line.scan(/mul\(\d+,\d+\)|do\(\)|don't\(\)/)
+      instructions = line.scan(/mul\(\d+,\d+\)|do\(\)|don't\(\)/)
 
-
-
-    instructions.each do |instruction|
-      case instruction
-      when "do()"
-        enabled = true
-      when "don't()"
-        enabled = false
-      else
-        # Process mul(a,b) instructions only if enabled
-        result += multiplication_result(instruction) if enabled
+      instructions.each do |instruction|
+        case instruction
+        when "do()"
+          enabled = true
+        when "don't()"
+          enabled = false
+        else
+          # Process mul(a,b) instructions only if enabled
+          result += multiplication_result(instruction) if enabled
+        end
       end
-    end
 
-    result
+      result
     end
     result
   end
