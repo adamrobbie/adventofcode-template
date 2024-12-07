@@ -1,4 +1,5 @@
 require_relative 'common'
+
 def count_guard_positions(input)
   grid = input.map(&:chars)
   visited = Set.new
