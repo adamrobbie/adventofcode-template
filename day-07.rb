@@ -14,6 +14,7 @@ def parse_line(line)
   test_value, numbers = line.split(': ')
   [test_value.to_i, numbers.split.map(&:to_i)]
 end
+
 def generate_operator_combinations(length, operators)
    operators.product(*([operators] * (length - 1)))
  end
